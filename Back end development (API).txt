@@ -1,0 +1,104 @@
+Back end development (API) using Node JS:
+
+Required Tools:
+download and install Node and VS Code
+1. npmjs.org
+	cmd >> 
+		node --version
+		npm --version
+
+2. MongoDB Atlas:
+
+	login into mongodb atlas
+
+
+Java script based Full stack web development:
+MERN	>> MongoDB Express React Node
+MEAN	>> MongoDB Express Angular Node
+MEVN	>> MongoDB Express Vue Node
+
+MongoDB, Express JS, Node >> Rest Client(VS Code Extension)
+
+
+
+Http	>> 8080
+
+URL based calling 
+
+
+Request: url
+Header >> Authentication
+Data transfer:
+1. Parameters(get,delete)	>> url with data>> eg: http://amazon.in/search/product='rebok shoe'
+2. Body(post/put)		>> hidden
+
+
+Mappings:   
+post,>> Create
+put,>>  Update
+delete,>> Delete
+get>> Read
+
+
+
+
+Response:
+data
+status>> 
+200,		>> ok, data
+400,		>> bad request
+500,		>> internal error
+401,		>> unauthorized
+403,		>> forbidden
+201,		>> success, no data
+404		>> not found
+
+
+
+
+run:
+python filename.py
+java filename
+gcc filename.c
+
+node filename.js
+
+
+Basic Operations:
+Data processing>> variables>> var, const, let
+Number
+String
+Object>> array, list, json
+Boolean
+
+var hai = "Razak Mohamed S"
+hai = false
+
+
+
+Functions/Operations:
+
+CRUD
+
+temporary memory
+array/list
+
+push
+pop
+map
+filter
+
+
+node package manager>> npm
+
+
+npm install 
+
+to read console inputs in node js prompt-sync:
+npm install prompot-sync
+
+
+https://github.com/razzaksr/JS-Backend-Intern-2025
+
+
+
