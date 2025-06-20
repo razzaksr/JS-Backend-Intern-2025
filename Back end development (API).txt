@@ -133,7 +133,8 @@ patient:
 "patientId":656789,
 "patientName":"Victor",
 "patientIssue":"ortho",
-"patientBMI":24.5
+"patientBMI":24.5,
+"patientType":"op/ip"
 }
 
 customer:
@@ -157,4 +158,63 @@ stringify	>> json to string
 
 Bank account teller management: CRUD with JSON
 
+
+
+Patient:
+
+admitNewPatient
+viewOut
+viewIn
+updateBMI
+closePAtient
+
+
+URL Based Calling
+/icici/open		>> open
+/icici/view			>> view customers
+/icici/transaction	>> transactions
+/icici/suspend		>> closeAccount
+
+const openAccount = () =>{}
+
+
+
+API Server/ Backend/ application server	 >> port, express js
+mappings:
+post>> open
+get	> view
+put> transaction
+delete> suspend
+
+
+Client: filename.http
+Rest Client>> construct request and call the backend api via url
+
+
+
+node package manager:
+
+express
+body-parser
+nodemon		>> devtools
+mongoose
+
+
+project:
+npm init
+
+steps:
+name
+version
+.
+.
+
+npm init -y
+
+
+package.json:
+name
+dependencies
+scripts/ execution:
+package-lock.json
 
