@@ -102,3 +102,59 @@ https://github.com/razzaksr/JS-Backend-Intern-2025
 
 
 
+Bank Account:
+Account Number
+Account Balance
+Account Status
+Account Holder
+IFSC Code
+
+Student:
+Reg No
+Name
+Dept
+College
+Year
+
+Patient
+patientId
+name
+issue
+bmi
+
+list of name
+list of patientId
+list of issue
+list of bmi
+
+Java Script Object Notation
+patient:
+{
+"patientId":656789,
+"patientName":"Victor",
+"patientIssue":"ortho",
+"patientBMI":24.5
+}
+
+customer:
+{
+"id":765456789,
+"name":"Razak Mohamed S",
+"contact":{
+"mobile":876545678,
+"email":"razaksrmd@gmail.com",
+"address":"Salem"
+}
+"experience":12
+}
+
+
+
+JSON:
+parse	>> string to json
+stringify	>> json to string
+
+
+Bank account teller management: CRUD with JSON
+
+
