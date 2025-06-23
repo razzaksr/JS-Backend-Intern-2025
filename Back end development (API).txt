@@ -218,3 +218,40 @@ dependencies
 scripts/ execution:
 package-lock.json
 
+ps1 >> running scripts disabled error
+set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+
+
+
+
+
+Web application: 
+Front end		>> UI
+Back end 	>> API
+Data end		>> database
+
+Java script >> 
+Express JS>> express
+auto restart>> nodemon
+
+project:
+	npm init
+	npm init -y
+
+run:
+	node filename.js
+
+backend:	
+	controller/ routers
+		mapping functions>> get, post, put, delete
+	
+	
+
+Client					API/Backend Server
+request						/kart/add
+							/kart/view
+							/kart/update
+
+
+
+
