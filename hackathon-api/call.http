@@ -1,0 +1,24 @@
+@address = http://localhost:8081
+
+GET {{address}}/fetch
+###
+GET {{address}}/position/5
+###
+GET {{address}}/range/4/7
+###
+GET {{address}}/word/3
+###
+POST {{address}}/recruite
+Content-Type: application/json
+
+{"person":"Selva"}
+###
+PUT {{address}}/change
+Content-Type: application/json
+
+{
+    "position":2,
+    "person":"Rasheedha R"
+}
+###
+DELETE {{address}}/remove/0

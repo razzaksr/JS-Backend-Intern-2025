@@ -253,5 +253,33 @@ request						/kart/add
 							/kart/update
 
 
+Web service:
+	communication between different technologies
+common format:
+JSON(rest web service)
+XML(soap web service)
+eg: Jinja(python UI)		>> Express JS API
+jinja raise the request as json
+express respond to the jinja as json
 
 
+eg:
+Bank
+
+Internet banking>> web app
+	ui, api, database
+mobile banking	>> mobile app
+	api, database
+
+
+
+Task:
+List of number represents salary of 10 employees
+get
+1. fetch all salaries
+2. fetch salaries >= 5.5
+put
+3. update salaries into 5% if existing salaries <=1.8
+delete
+4. delete salaries >=20.5
+5. add new salary via post mapping
