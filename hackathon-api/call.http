@@ -1,5 +1,44 @@
-@address = http://localhost:8081
+@hackeve = http://localhost:8081/event
+DELETE {{hackeve}}/cancel/ai hackathon
+###
+DELETE {{hackeve}}/cancel/iot hackathon
+###
+DELETE {{hackeve}}/cancel/sustainable energy hackathon
+###
+PATCH {{hackeve}}/announce
+Content-Type: application/json
 
+{
+    "name":"sustainable energy hackathon",
+    "winner":"anbarasan",
+    "firstrunner":"vinayak",
+    "secondrunner":"krishna"
+}
+###
+PATCH {{hackeve}}/enroll/sustainable energy hackathon/dharshan
+###
+GET {{hackeve}}/view
+###
+POST {{hackeve}}/schedule
+Content-Type: application/json
+
+{
+    "name": "HackIndia",
+    "organizer": "MEC",
+    "winner": "",
+    "firstrunner": "",
+    "secondrunner": "",
+    "participants": []
+}
+
+
+
+
+###
+@address = http://localhost:8081/begin
+
+PUT {{address}}/apprisal
+###
 GET {{address}}/fetch
 ###
 GET {{address}}/position/5

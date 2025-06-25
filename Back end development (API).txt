@@ -283,3 +283,60 @@ put
 delete
 4. delete salaries >=20.5
 5. add new salary via post mapping
+
+
+
+Monolithic:
+
+amazon		>> base address
+	use('/kart',kart)	
+	use('order',order)
+    kart>> routers
+	kart/add
+	kart/view
+	kart/update		>> amazon.in/kart/update
+	kart/delete
+   order>> routers
+	order/place
+	order/cancel
+	order/return
+	order/view
+
+
+
+rest client						api
+  http							backend
+get/delete        					request.params
+post/put						request.body
+content-type:application/json
+
+{
+	"":"",
+	"":3,
+}
+
+
+
+
+hackathon event management:
+list of hackathons contains properties such as 
+name, organizer, participants, winner, firstrunner, secondrunner
+where each hackathon contains list of participants
+condition is announce hackathon winner, firstrunner, secondrunner only if they are all participants
+note: temporary storage logic
+1. schedule hackathon	>> post
+2. enroll participants		>> put/patch
+3. update winner, firstrunner, secondrunner>> put/patch
+4. view events			>>  get
+5. cancel event			>> delete
+
+http://192.168.29.128:8081/event/view
+
+Task:
+
+Patient:
+admitNewPatient
+viewOut
+viewIn
+updateBMI
+closePAtient
