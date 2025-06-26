@@ -290,7 +290,7 @@ Monolithic:
 
 amazon		>> base address
 	use('/kart',kart)	
-	use('order',order)
+	use('/order',order)
     kart>> routers
 	kart/add
 	kart/view
@@ -340,3 +340,7 @@ viewOut
 viewIn
 updateBMI
 closePAtient
+
+
+uuid	
+npm i uuid

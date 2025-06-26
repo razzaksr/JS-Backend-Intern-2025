@@ -1,3 +1,29 @@
+@hos = http://localhost:8081/hospital
+
+DELETE {{hos}}/discontinue/abcd312k
+###
+PATCH {{hos}}/mod/abcd312k
+Content-Type: application/json
+
+{
+    "bmi":19.5
+}
+###
+GET {{hos}}/op
+###
+GET {{hos}}/ip
+###
+GET {{hos}}/viewAll
+###
+POST {{hos}}/register
+Content-Type: application/json
+
+{
+    "patientName":"Mallika",
+    "patientIssue":"gyno",
+    "patientBMI":29.4
+}
+###
 @hackeve = http://localhost:8081/event
 DELETE {{hackeve}}/cancel/ai hackathon
 ###
