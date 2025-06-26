@@ -344,3 +344,16 @@ closePAtient
 
 uuid	
 npm i uuid
+
+
+
+Task: 
+List of couriers and perform CRUD where each 
+courier contains id, from, to, item, status(collected, shipped, delivered, returned)
+
+1. new courier
+2. check status
+3. view shipped couriers
+4. view couriers by "from address"
+5. view all
+6. update courier status
