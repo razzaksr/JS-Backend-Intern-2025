@@ -3,6 +3,10 @@ const parser = require('body-parser')
 const base = require('./basics')
 const hack = require('./hackathon')
 const patient = require('./patient')
+const connectDb = require('./dbconfig')
+
+// call connectDb
+connectDb()
 
 // middleware
 app.use(parser.json())
