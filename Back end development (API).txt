@@ -357,3 +357,50 @@ courier contains id, from, to, item, status(collected, shipped, delivered, retur
 4. view couriers by "from address"
 5. view all
 6. update courier status
+
+
+
+
+mongodb: perm storage
+NoSQL based database server
+
+SQL				NoSQL
+database			database
+tables			collections
+columns			fields
+rows				documents
+primary			_id
+
+
+document:
+{
+        "patientId":"dbvj8394d",
+        "patientName":"Divakar",
+        "patientIssue":"ortho",
+        "patientBMI":31.4,
+        "patientType":"ip"
+}
+
+collection>> list of documents
+
+
+server>> ip:port
+url: 27017
+
+
+backend>> localhost:8081
+
+Interactions>> driver module>> mongoose>> Object Document Mapping
+
+functionalities:
+	schema>> collections
+	CRUD
+		save/ insert
+		delete
+		find
+		get
+
+database>> cloud:27017
+
+
+npm i mongoose
