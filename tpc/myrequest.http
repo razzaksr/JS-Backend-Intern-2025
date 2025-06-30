@@ -1,0 +1,12 @@
+@base = http://localhost:8082/hire
+
+GET {{base}}/view
+###
+POST {{base}}/schedule
+Content-Type: application/json
+
+{
+    "company":"TCS",
+    "role":"Associate Software Trainee",
+    "package":3.5
+}
