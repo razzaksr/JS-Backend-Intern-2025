@@ -1,5 +1,23 @@
 @base = http://localhost:8082/hire
 
+PATCH {{base}}/results
+Content-Type: application/json
+
+{
+    "primary":"686235e2d53bf90697fb7391",
+    "candidates":["Gokilan","Ramya"]
+}
+###
+PATCH {{base}}/register
+Content-Type: application/json
+
+{
+    "primary":"686235b2d53bf90697fb738d",
+    "candidate":"Gokilan"
+}
+###
+DELETE {{base}}/cancel/68623df17b8245766d2edef0
+###
 GET {{base}}/view
 ###
 POST {{base}}/schedule
