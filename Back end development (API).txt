@@ -404,3 +404,93 @@ database>> cloud:27017
 
 
 npm i mongoose
+
+
+Mongo Db CRUD
+
+
+
+
+
+
+Authentication:
+basic:
+	username
+	password
+
+GET {{base}}
+Authorization: Basic username:password
+
+POST {{base}}
+Authorization: Basic username:password
+Content-Type: application/json
+
+{
+	//
+}
+
+json web token(jwt):
+	login>> username, password
+		token
+
+POST {{base}}/login
+Content-type: application/json
+
+{
+"username":"",
+"password":""
+}
+
+endpoint via token
+
+GET {{base}}
+Authorization: Bearer TOKEN
+
+POST {{base}}
+Authorization: Bearer TOKEN
+Content-Type: application/json
+
+{
+	//
+}
+
+
+jwt:
+header/ encryption
+payload>> data >> user details
+expiry	>> 
+
+
+login>> generate token
+other endpoints>> via token
+
+user schema
+	username, password(encrypt), role
+
+
+
+>> module to be installed
+bcryptjs
+jsonwebtoken
+
+npm i bcryptjs jsonwebtoken
+
+user schema
+auth router: signup
+test via http file
+auth router: 
+	login>> generate token
+		generate secret key>
+			base64encode
+		add into .env
+
+authenticate/secure other endpoints:
+	/hire
+		schedule, cancel, view, register, results
+
+
+role based access control(RBAC):
+	staff:
+		schedule, cancel, results
+	student:
+		register, view
