@@ -1,11 +1,11 @@
 const router = require('express').Router()
 const {Campus} = require('./model')
-const {tokenCheck} = require('./middleware')
+const {tokenCheck, roleCheck} = require('./middleware')
 
 // CRUD operations endpoints
 
 // schedule new campus requirement
-router.post('/schedule',tokenCheck,async(req,res)=>{
+router.post('/schedule',tokenCheck,roleCheck(['staff']),async(req,res)=>{
     const newCampus = new Campus(req.body)
     await newCampus.save()
     res.json({"message":
@@ -13,18 +13,18 @@ router.post('/schedule',tokenCheck,async(req,res)=>{
 })
 
 // read all campus companies
-router.get('/view',tokenCheck,async(req,res)=>{
+router.get('/view',tokenCheck,roleCheck(['staff','student']),async(req,res)=>{
     res.json(await Campus.find())
 })
 
 // delete campus via _id
-router.delete('/cancel/:id',tokenCheck,async(req,res)=>{
+router.delete('/cancel/:id',tokenCheck,roleCheck(['staff']),async(req,res)=>{
     await Campus.findOneAndDelete({_id:req.params.id})
     res.json({"message":`${req.params.id} has been cancelled`})
 })
 
 // add participants by _id
-router.patch('/register',tokenCheck,async(req,res)=>{
+router.patch('/register',tokenCheck,roleCheck(['student']),async(req,res)=>{
     const{primary,candidate} = req.body
     const tempCamp = await Campus.findOne({_id:primary})
     if(tempCamp&&tempCamp.recruited.length>0)
@@ -40,7 +40,7 @@ router.patch('/register',tokenCheck,async(req,res)=>{
 })
 
 // declare who are all selected
-router.patch('/results',tokenCheck,async(req,res)=>{
+router.patch('/results',tokenCheck,roleCheck(['staff']),async(req,res)=>{
     const{primary,candidates} = req.body
     const tempCamp = await Campus.findOne({_id:primary})
     if(tempCamp&&tempCamp.recruited.length>0)

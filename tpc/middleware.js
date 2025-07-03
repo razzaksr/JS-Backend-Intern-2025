@@ -15,4 +15,11 @@ const tokenCheck = async(req,res,next) =>{
     }
 }
 
-module.exports = {tokenCheck}
+const roleCheck = (allowedRoles) => {
+  return (req, res, next) => {
+    if (!allowedRoles.includes(req.user.role)) return res.sendStatus(403);
+    next();
+  };
+};
+
+module.exports = {tokenCheck,roleCheck}

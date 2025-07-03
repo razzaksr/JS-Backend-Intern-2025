@@ -3,6 +3,14 @@ POST {{auth}}/signin
 Content-Type: application/json
 
 {
+    "username":"nobel",
+    "password":"mec@tpc"
+}
+###
+POST {{auth}}/signin
+Content-Type: application/json
+
+{
     "username":"Dharshan",
     "password":"mec@2026"
 }
@@ -29,19 +37,19 @@ Content-Type: application/json
 }
 ###
 PATCH {{base}}/register
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiRGhhcnNoYW4iLCJpYXQiOjE3NTE0MzM1NTgsImV4cCI6MTc1MTQzNzE1OH0.VnnCSvmcYSjoAGefaru9Xk9VR3RStF4-jQGbAzVwuIM
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoibm9iZWwiLCJpYXQiOjE3NTE1MTgyODgsImV4cCI6MTc1MTUyMTg4OH0.DAH1wvAl-aDHJiLdzzWhCdZwW1ZDEBLKuD-0diONnaA
 Content-Type: application/json
 
 {
-    "primary":"686235b2d53bf90697fb738d",
+    "primary":"68653636fe8da3a05d7d4950",
     "candidate":"Gokilan"
 }
 ###
-DELETE {{base}}/cancel/68623df17b8245766d2edef0
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiRGhhcnNoYW4iLCJpYXQiOjE3NTE0MzM1NTgsImV4cCI6MTc1MTQzNzE1OH0.VnnCSvmcYSjoAGefaru9Xk9VR3RStF4-jQGbAzVwuIM
+DELETE {{base}}/cancel/6862166465b049dd316005e9
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoibm9iZWwiLCJpYXQiOjE3NTE1MTgyODgsImV4cCI6MTc1MTUyMTg4OH0.DAH1wvAl-aDHJiLdzzWhCdZwW1ZDEBLKuD-0diONnaA
 ###
 GET {{base}}/view
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiRGhhcnNoYW4iLCJpYXQiOjE3NTE0MzM1NTgsImV4cCI6MTc1MTQzNzE1OH0.VnnCSvmcYSjoAGefaru9Xk9VR3RStF4-jQGbAzVwuIM
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoibm9iZWwiLCJpYXQiOjE3NTE1MTgyODgsImV4cCI6MTc1MTUyMTg4OH0.DAH1wvAl-aDHJiLdzzWhCdZwW1ZDEBLKuD-0diONnaA
 ###
 POST {{base}}/schedule
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiRGhhcnNoYW4iLCJpYXQiOjE3NTE0MzM1NTgsImV4cCI6MTc1MTQzNzE1OH0.VnnCSvmcYSjoAGefaru9Xk9VR3RStF4-jQGbAzVwuIM
